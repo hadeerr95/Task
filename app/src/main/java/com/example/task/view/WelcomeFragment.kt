@@ -23,25 +23,14 @@ class WelcomeFragment : Fragment() {
     ): View? {
         _binding = FragmentWelcomeBinding.inflate(inflater, container, false)
         return _binding?.root
-
-
-        /*inflater.inflate(R.layout.fragment_welcome, container, false)*/
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         _binding?.startButton?.setOnClickListener {
-            print("hello")
             it.findNavController().navigate(R.id.action_welcomeFragment_to_jobsFragment)
         }
 
     }
 
-    companion object {
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            WelcomeFragment().apply {
-
-            }
-    }
 }
